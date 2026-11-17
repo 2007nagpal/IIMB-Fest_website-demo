@@ -1,0 +1,107 @@
+/* Element selectors set the base. Classes are reusable; IDs target sections. */
+:root {
+  --paper: #f7f5f0;
+  --ink: #182e35;
+  --muted: #53626a;
+  --accent: #12665f;
+  --line: #d8deda;
+  --white: #ffffff;
+  --warm: #eacb85;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Segoe UI", Arial, sans-serif; line-height: 1.7; }
+a { color: inherit; text-underline-offset: 5px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { line-height: 1.2; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.5rem, 4.8vw, 4.5rem); font-weight: 400; letter-spacing: -0.045em; margin-bottom: 24px; }
+h1 em { color: var(--accent); font-weight: 400; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.3rem; }
+p { margin-bottom: 16px; }
+.container { width: min(1120px, 90%); margin-inline: auto; }
+.skip-link { position: absolute; top: -100px; left: 16px; background: var(--white); padding: 12px 18px; z-index: 20; }
+.skip-link:focus { top: 12px; }
+.site-header { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
+.nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 18px; }
+.wordmark { font-family: Georgia, serif; font-size: 2rem; font-weight: 700; text-decoration: none; line-height: 1; }
+.wordmark span { color: var(--accent); }
+.nav-links { display: flex; flex-wrap: wrap; gap: 8px 26px; padding: 0; margin: 0; list-style: none; }
+.nav-links a { font-size: 0.875rem; text-decoration: none; padding-block: 8px; }
+.nav-links a:hover { color: var(--accent); text-decoration: underline; }
+.hero { display: grid; grid-template-columns: 1.65fr 1fr; align-items: center; gap: 60px; padding-block: 76px; }
+.eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; margin-bottom: 22px; }
+.hero-description { max-width: 500px; color: var(--muted); font-size: 1.1rem; }
+.button { display: inline-flex; align-items: center; gap: 28px; background: var(--accent); color: var(--white); padding: 13px 22px; border-radius: 4px; text-decoration: none; font-size: 0.875rem; margin-top: 14px; }
+.button:hover { background: var(--ink); }
+.profile-card { border-radius: 8px; background: var(--ink); color: var(--white); padding: 32px; }
+.monogram { display: flex; justify-content: center; align-items: center; width: 76px; height: 76px; background: var(--warm); color: var(--ink); font-family: Georgia, serif; font-size: 2rem; border-radius: 50%; margin-bottom: 28px; }
+.profile-card .eyebrow { color: #bed3d3; margin-bottom: 12px; }
+.profile-card h2 { font-family: Georgia, serif; font-size: 2rem; font-weight: 400; margin-bottom: 8px; }
+.profile-card p { margin-bottom: 10px; }
+.profile-divider { height: 1px; background: #50636a; margin-block: 24px; }
+.institution { font-size: 0.9rem; color: #d4dfdf; }
+.status { display: inline-block; margin-top: 12px; padding: 4px 10px; border: 1px solid #68847e; color: #dcece6; border-radius: 20px; font-size: 0.72rem; }
+.section { padding-block: 36px 46px; border-top: 1px solid var(--line); }
+.section-label { display: flex; align-items: baseline; gap: 16px; margin-bottom: 26px; }
+.section-label > span { color: var(--accent); font-size: 0.75rem; font-weight: 700; }
+.section-label h2 { margin: 0; }
+.about-content { max-width: 860px; }
+.about-content p { color: var(--muted); }
+.about-content .lead { font-size: 1.4rem; line-height: 1.5; color: var(--ink); }
+.objective { border-left: 3px solid var(--accent); padding-left: 20px; margin-top: 24px; }
+.education-card { background: var(--white); border: 1px solid var(--line); padding: 28px; border-radius: 6px; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.education-card .eyebrow { color: var(--accent); margin-bottom: 12px; }
+.education-card h3 { margin-bottom: 6px; }
+.education-card p:last-child { margin: 0; color: var(--muted); }
+.specialisation { margin-bottom: 8px; }
+.pill { background: #e4f0eb; color: #17564c; font-size: 0.75rem; border-radius: 20px; padding: 5px 13px; white-space: nowrap; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.learning-card { border: 1px solid var(--line); border-radius: 6px; padding: 25px; background: var(--white); }
+.card-number { color: var(--accent); font-family: Georgia, serif; font-size: 1.5rem; display: block; margin-bottom: 26px; }
+.learning-card h3 { font-size: 1.05rem; }
+.learning-card p { font-size: 0.92rem; color: var(--muted); margin-bottom: 0; }
+/* ID selector gives the achievements section its featured treatment. */
+#achievements .achievement-card { background: #e9efeb; border: 1px solid #cad8ce; border-radius: 6px; padding: 32px; }
+.achievement-card .eyebrow { color: var(--accent); margin-bottom: 18px; }
+.achievement-card h3 { font-family: Georgia, serif; font-size: 1.85rem; font-weight: 400; margin-bottom: 14px; }
+.achievement-card p:last-child { color: var(--muted); margin-bottom: 0; }
+.education-list { display: grid; gap: 16px; }
+.contact-details { border-top: 1px solid #50636a; padding-top: 18px; margin-top: 24px; font-size: 0.86rem; overflow-wrap: anywhere; }
+.case-card { border-left: 3px solid var(--accent); padding: 8px 0 8px 22px; margin-top: 26px; }
+.case-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+.case-card p { color: var(--muted); margin: 0; }
+.skill-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; list-style: none; padding: 0; margin: 0; }
+.skill-list li { background: white; border: 1px solid var(--line); border-radius: 6px; padding: 18px 22px; display: flex; flex-direction: column; justify-content: center; }
+.skill-list span { color: var(--muted); font-size: 0.88rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 24px 0 0; }
+.tags li { border: 1px solid #acbeb4; border-radius: 4px; font-size: 0.75rem; padding: 4px 12px; }
+.footer { border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 20px; padding-block: 25px; color: var(--muted); font-size: 0.75rem; }
+.footer p { margin: 0; }
+.footer span { padding-inline: 8px; }
+/* Collapse the desktop layout on small screens; keep navigation visible. */
+@media (max-width: 760px) {
+  html { scroll-padding-top: 140px; }
+  .hero { grid-template-columns: 1fr; gap: 36px; padding-block: 48px; }
+  .profile-card { max-width: 440px; width: 100%; }
+  .card-grid, .skill-list { grid-template-columns: 1fr; }
+  .nav { align-items: flex-start; }
+  .nav-links { justify-content: flex-end; gap: 4px 16px; max-width: 255px; }
+  .education-card { flex-direction: column; gap: 14px; }
+  .section { padding-block: 30px 36px; }
+  .footer { flex-direction: column; gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  .site-header, .button, .skip-link, .footer a { display: none; }
+  body { background: white; color: black; font-size: 10pt; }
+  .hero { padding-block: 20px; gap: 25px; }
+  h1 { font-size: 30pt; }
+  .section { padding-block: 18px; }
+  .education-card, .learning-card, .achievement-card, .skill-list li { break-inside: avoid; }
+  .profile-card { background: white; color: black; border: 1px solid #888; }
+  .profile-card .eyebrow, .profile-card .institution, .status { color: black; }
+}
+
+@media (max-width: 400px) { .nav { flex-direction: column; gap: 14px; } .nav-links { justify-content: flex-start; max-width: none; } }
